@@ -1,6 +1,11 @@
+import conn from "../Database/connection";
+import { classToPlain } from "class-transformer";
+
 class CinemaService {
   public async GetAllCinemas() {
-    return "Evo ti svi";
+    await conn.poolPromise.then(async (pool) => {
+      return classToPlain(await pool.query("SELECT * FROM racun")).recordset;
+    });
   }
 
   public async GetCinema(id) {

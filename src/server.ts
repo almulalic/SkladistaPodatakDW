@@ -2,6 +2,9 @@ import cors from "cors";
 import express from "express";
 import bodyParser from "body-parser";
 
+const sql = require("mssql");
+import dbConfig from "./Database/config";
+
 import { CinemaController } from "./Controllers";
 
 const app = express();

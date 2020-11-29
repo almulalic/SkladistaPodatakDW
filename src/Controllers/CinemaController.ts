@@ -4,6 +4,7 @@ import { CinemaService } from "../Services";
 const CinemaController = express.Router();
 
 CinemaController.get("/all", async (req, res) => {
+  console.log(await CinemaService.GetAllCinemas());
   res.json(await CinemaService.GetAllCinemas());
 });
 
