@@ -56,7 +56,7 @@ for film in range(1,44):
 
                 racunSql = "INSERT INTO dbo.racun (kinoId,kartaId,datum,tipPlacanjaId) VALUES ("
                 racunSql += "1," + str(globalKarta) + ","
-                racunSql += "'" + datetime.datetime(datum.year,datum.month,datum.day,vrijemePrikazivanja[film % 5],0,0).strftime("%Y-%m-%d %H:%M:%S") + "'"
+                racunSql += "'" + datetime.datetime(datum.year,datum.month,datum.day,vrijemePrikazivanja[film % 5],0,0).strftime("%Y-%m-%d %H:%M:%S") + "', "
                 racunSql += str(1 if random.randint(0,22) <= 11 else random.randint(2,11))
                 racunSql += ");"                
 
@@ -73,7 +73,7 @@ for film in range(1,44):
                     narudzbaSql = "INSERT INTO dbo.narudzba (narudzbaTipId,racunId,datum) VALUES ("
                     narudzbaSql += str(random.randint(1,50)) + ", "
                     narudzbaSql += str(globalRacun) + ", "
-                    narudzbaSql += "'" + datetime.datetime(datum.year,datum.month,datum.day,vrijemePrikazivanja[film % 5],0,0).strftime("%Y-%m-%d %H:%M:%S") + "'"
+                    narudzbaSql += "'" + datetime.datetime(datum.year,datum.month,datum.day,vrijemePrikazivanja[film % 5],0,0).strftime("%Y-%m-%d %H:%M:%S") + "'" 
                     narudzbaSql += ");"
                     finalniSql += narudzbaSql + "\n"
                     globalNarudzba += 1
