@@ -1,0 +1,53 @@
+% Custom komande i redefinicije
+
+\renewcommand{\contentsname}{Sadržaj} % Naslov ToC-a
+
+\renewcommand{\dateseparator}{.} % Stavi tacku kao separator
+
+\renewcommand{\algorithmcfname}{Algoritam} % Umjesto 'Algorithm'
+
+\renewcommand{\figurename}{Slika} % Umjesto 'Figure'
+
+\renewcommand{\tablename}{Tabela} % Umjesto 'Figure'
+
+\renewcommand\refname{Reference} % Umjesto 'reference'
+
+\newcommand{\cmark}{\ding{51}} % Checkmark
+\newcommand{\xmark}{\ding{55}} % Xmark
+
+\providecommand{\lxor}{\veebar} % Logicko XOR
+
+\newcommand{\Z}{\mathbb{Z}} % Skup Z 
+
+\setcounter{MaxMatrixCols}{15} % Vece matrice
+
+
+% Margine
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+% CUSTOM KOMANDE:
+
+\newcommand{\uokviri}[1]{ % Komanda koja nesto uokviri
+\fbox{\begin{varwidth}{0.98\columnwidth}#1\end{varwidth}} 
+}
+
+\newcommand{\heart}{\ensuremath\varheartsuit} % srce
+
+\newcommand{\linija}[1]{\rule{\linewidth}{#1}} % Custom naredba za horizontalnu liniju
+
+% HEADER I FOOTER:
+
+\pagestyle{fancy}
+\lhead{} % Lijevi H
+\chead{Data warehouse u bioskopu} % Centralni H
+\rhead{\firstxmark} % Desni H
+\lfoot{Elektrotehnički fakultet, Univerzitet u Sarajevu} % Lijevi F
+\cfoot{} % Centralni F
+\rfoot{Strana\ \thepage\ od\ \protect\pageref{LastPage}} % Desni F
+\renewcommand\headrulewidth{0.4pt} % Velicina headera
+\renewcommand\footrulewidth{0.4pt} % Velicina footera

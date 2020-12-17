@@ -1,0 +1,108 @@
+\documentclass[12pt,table,xcdraw]{article}
+\usepackage[utf8]{inputenc}
+
+
+\include{postavke/default} % Paketi
+\include{postavke/komande} % Custom naredbe
+\include{postavke/naslov_grupni} % Naslovna stranica
+
+
+\begin{document} 
+
+\thispagestyle{empty}		% Bez numerisanja naslovne strane
+
+\printtitle					% Ispisujemo naslov (komanda iz naslov_grupni.tex)
+
+\printauthor				% Ispisujemo autora (komanda iz naslov_grupni.tex)
+
+\newpage
+\hypersetup{linkcolor=black}
+
+\section{Uvod}
+
+Razvojem informacijskih tehnologija i mogućnosti spremanja velikih količina podataka na disk javila se potreba za učinkovitim, strukturiranim načinima spremanja podataka tako da bi se mogli koristiti za analizu. Mnoge firme koriste sistem za skladištenja podataka kako bi poboljšale svoje poslovne procese i otkrile neke uzorke u ponašanju svojih korisnika. \\
+
+DWH predstavlja bazu podataka koja omogućuje brzo i jednostavno izvoĎenje pretraga i upita nad velikim količinama podataka, kao i skup podataka na kojem se bazira sistem podrške u odlučivanju. Namijenjena je menadžerima, ali i svima koji u svom poslu obavljaju analitičke zadatke. Sadrži ogromne količine podataka, koji se koriste u svrhu poslovnih analiza i postizanja što boljih tržišnih rezultata. \\
+
+U ovom radu ćemo detaljnije istražiti DWH u bioskopu.
+
+\newpage
+
+\section{UML reprezentacija relacijske baze podataka}
+
+ Za modeliranje baza podataka i skladišta podataka mogu se koristiti UML-dijagrami klasa. Ključna prednost UML-a je intuitivnost upotrebe dijagrama i široka baza korisnika koji godinama rade s UML-dijagramima na najrazličitijim problemima oblikovanja sistema. U praktičnom dijelu rada izvedena je programska podrška koja omogućava automatsku izradu dimenzijskih relacija i činjenične relacije u relacijskoj bazi podataka na temelju konceptualnog modela skladišta definiranog UML-dijagramom klasa od strane korisnika-oblikovatelja skladišta podataka. \\
+UML (Unified Modelling Language) služi za:
+\begin{itemize}
+\item Specifikaciju
+\item Vizuelizaciju
+\item Konstrukciju
+\item Dokumentaciju razvoja softvera
+\end{itemize}
+
+\subsection{ER dijagram}
+
+Model entiteta i veza nekog sistema, izražavamo preko entitete, atribute i veze pomoću dijagrama nazvanog ER dijagram
+(Entity Relationship).
+Velika prednost ER dijagrama jeste u tome što se lako crtaju i razumiju.
+Dijagram sadrži tri osnovne konstrukcije:
+\begin{itemize}
+\item Entitete
+\item Veze
+\item Atribute
+\end{itemize}
+
+
+Na slici ispod se nalazi slika primjera ER dijagram kina. 
+
+\newpage
+
+\begin{figure}[h]
+\centering
+\captionsetup{justification=centering}
+\includegraphics[width=0.85\columnwidth]{slike/slika1.png}
+\label{fig:kod}
+\end{figure}
+
+\newpage
+
+\subsection{Use case dijagram}
+
+Dijagram slučajeva (engl. Use case diagram) prikaz je interakcije korisnika sa sistemom koji pokazuje odnos između korisnika i različitih slučajeva korištenja u kojima je korisnik uključen. Dijagram slučaja korišenja može indetifikovati različite tipove korisnika sistema i različite slučajeve korištenja i često će biti propraćen i drugim tipovima dijagrama. Slučajevi korištenja predstavljeni su krugovima ili elipsama.
+
+\begin{figure}[h]
+\centering
+\captionsetup{justification=centering}
+\includegraphics[width=0.85\columnwidth]{slike/slika4.png}
+\label{fig:kod}
+\end{figure}
+
+
+
+\subsection{Dijagram aktivnosti}
+
+Dijagram aktivnosti je dijagram koji ističe tok kontrole od aktivnosti do aktivnosti. Koristi se za prikaz tokova u sistemu, sa alternativnim putanjama. Sli
+čan je klasičnim blok dijagramima, s tim što se na njemu prikazuju i paralelni tokovi. Aktivnost je ponašanje objekta dok je u određenom stanju. Tranzicija je kretanje od aktivnosti do aktivnosti ili od stanja do stanja. Služe za opis logike procedura, poslovnih postupaka i toka posla. Mogu prikazati i paralelna ponašanja. Pridružuju se klasi, odnosno njenoj operaciji ili slučaju korištenja.
+\newpage
+
+\begin{figure}[h]
+\centering
+\captionsetup{justification=centering}
+\includegraphics[width=0.35\columnwidth]{slike/slika2.png}
+\label{fig:kod}
+\end{figure}
+
+
+\newpage
+\subsection{Dijagram klasa}
+
+Dijagram klasa (dio UML-a) jest vrsta strukturnog dijagrama u softverskom inžinjeringu, koji opisuje strukturu sustava objašnjavajući klase unutar sustava, njihove atribute i odnose.
+
+\begin{figure}[h]
+\centering
+\captionsetup{justification=centering}
+\includegraphics[width=0.85\columnwidth]{slike/slika3.png}
+\label{fig:kod}
+\end{figure}
+
+
+\end{document}
