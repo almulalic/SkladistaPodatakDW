@@ -6,25 +6,29 @@ def RandomTelefon():
     broj += str(random.randint(100,999)) + "-" + str(random.randint(100,999))
     return broj
 
-namelist = open(os.path.join("karta/source/namelist.csv"), 'r',encoding='utf-8')
-address = open(os.path.join("karta/source/address.csv"), 'r',encoding='utf-8')
-output = open(os.path.join("karta/source/identities.csv"),"w",encoding='utf-8')
+namelistFile = open(os.path.join("karta/source/namelist.csv"), 'r',encoding='utf-8')
+addressFile = open(os.path.join("karta/source/address.csv"), 'r',encoding='utf-8')
+outputFile = open(os.path.join("karta/source/identities.csv"),"w",encoding='utf-8')
 
-outputText = ""
+outputFileText = ""
 
 identiteti = []
-for red in namelist.read().split("\n"):
+for red in namelistFile.read().split("\n"):
     if(len(red) > 0):
         identiteti.append(red.strip())
        
-redovi = address.read().split("\n")
+redovi = addressFile.read().split("\n")
 for i in range(len(redovi)):
     if(len(redovi[i]) > 0):
         adresa = ""
         for rijec in redovi[i].replace(",","").rstrip().split(" "):
             adresa += rijec.lower().capitalize() + " "
     
-        outputText += ';'.join(identiteti[i].split(" ")) + ";" + RandomTelefon() + ";" + adresa + str(random.randint(1,100)) + "," + "\n"
+        outputFileText += ';'.join(identiteti[i].split(" ")) + ";" + RandomTelefon() + ";" + adresa + str(random.randint(1,100)) + "," + "\n"
        
 
-output.write(str(outputText))
+outputFile.write(str(outputFileText))
+
+namelistFile.close()
+addressFile.close()
+outputFile.close()

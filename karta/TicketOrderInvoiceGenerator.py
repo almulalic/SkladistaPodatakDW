@@ -4,7 +4,6 @@ import random
 import string
 import datetime
 
-sqlFile = open(os.path.join("karta/sql/kartaNarudzbaRacun.sql"),"w",encoding="utf-8")
 
 #region Helper Functions
 
@@ -32,6 +31,9 @@ def SQLCommaDelimitedValues(initialSQL="",values=[],closeBracket=True): # Pretva
 
 #region Inicijalizacija
 
+sqlFile = open(os.path.join("karta/sql/kartaNarudzbaRacun.sql"),"w",encoding="utf-8")
+ratingFile = open(os.path.join("NoDB/ratings.csv"),"w")
+
 brojFilmova = 44
 brojSedmica = 11
 projekcijaPoDanu = 5
@@ -47,18 +49,22 @@ cijeneNarudzba =  [3,4,5,2,2.5,3,3,3,2.5,3,3,2,3,3,2,2.5,3,3,2,2.5,3,3,4.5,5.5,6
 finalniSql = ""
 datum = datetime.datetime(2019,1,7) # Prvi ponedeljak u januaru 2019, datum otvorenja kina
 
-globalKarta = 1 # Logički ID karte, odraz onog u bazi
-globalNarudzba = 1 # Logički ID narudžbe, odraz onog u bazi
-globalRacun = 1 # Logički ID računa, odraz onog u bazi
-
 sjedistaSlova = string.ascii_letters # Generisanje slova za sjedišta
-identiteti = []
 
 identities = []
 with open(os.path.join("karta/source/identities.csv"),"r",encoding="utf-8") as f:
     for x in f.read().split("\n"):
         if(len(x) > 0):
             identities.append(x.split(";"))
+
+ratingOutputString = ""
+prosjecnaOcjenaKina = 5
+prosjecnaOcjenaUsluge = 4
+
+globalKarta = 1 # Logički ID karte, odraz onog u bazi
+globalNarudzba = 1 # Logički ID narudžbe, odraz onog u bazi
+globalRacun = 1 # Logički ID računa, odraz onog u bazi
+globalRating = 1 # Logički ID računa, odraz onog u fajlu
 
 #endregion
 
@@ -149,14 +155,32 @@ for film in range(brojFilmova):
                 finalniSql += SQLCommaDelimitedValues(initialSQL=racunSql,values=values) + "\n"
 
                 #endregion
-                
+    
+
                 globalKarta += 1 # Povećava logički ID karte
                 globalRacun += 1 # Povećava logički ID racuna
                 sjedisteId += 1 # Povećava logički ID sjedista
 
                 if(sjedisteId > 5):
                     redSlovo += 1
-                
+
+            #region Rating/Ocjene
+                    
+            brojUtisaka = random.randint(int(kupljenoKarti/2),kupljenoKarti) # Pretpostavljamo da neće svi kupiti kartu
+            prosjecnaOcjenaFilma = random.randint(1,5)
+
+            for i in range(brojUtisaka):
+                ratingOutputString += ','.join([
+                    str(globalRating),
+                    str(prosjecnaOcjenaKina if random.randint(0,10) <= 7 else random.randint(1,5)),
+                    str(prosjecnaOcjenaUsluge if random.randint(0,10) <= 5 else random.randint(1,5)),
+                    str(prosjecnaOcjenaFilma if random.randint(0,10) <= 6 else random.randint(1,5)),
+                    str(datum)
+                ]) + "\n"
+                globalRating+=1
+
+            #endregion    
+                        
         finalniSql += "/* Kraj dana */ \n"
 
         datum = datum + datetime.timedelta(days=1) # Povećavamo dan za 1
@@ -168,3 +192,6 @@ for film in range(brojFilmova):
 
 sqlFile.write(str(finalniSql))
 sqlFile.close()
+
+ratingFile.write(ratingOutputString)
+ratingFile.close()
