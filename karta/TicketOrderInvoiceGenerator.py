@@ -1,9 +1,10 @@
 import os
+import csv
 import random
 import string
 import datetime
 
-sqlFile = open(os.path.join("karta/","kartaNarudzbaRacun.sql"),"w")
+sqlFile = open(os.path.join("karta/sql/kartaNarudzbaRacun.sql"),"w",encoding="utf-8")
 
 #region Helper Functions
 
@@ -25,6 +26,7 @@ def SQLCommaDelimitedValues(initialSQL="",values=[],closeBracket=True): # Pretva
     if(closeBracket): initialSQL+= ");"
 
     return initialSQL
+
 
 #endregion
 
@@ -50,6 +52,13 @@ globalNarudzba = 1 # Logički ID narudžbe, odraz onog u bazi
 globalRacun = 1 # Logički ID računa, odraz onog u bazi
 
 sjedistaSlova = string.ascii_letters # Generisanje slova za sjedišta
+identiteti = []
+
+identities = []
+with open(os.path.join("karta/source/identities.csv"),"r",encoding="utf-8") as f:
+    for x in f.read().split("\n"):
+        if(len(x) > 0):
+            identities.append(x.split(";"))
 
 #endregion
 
@@ -64,6 +73,30 @@ for film in range(brojFilmova):
             
             for karta in range(kupljenoKarti):
    
+                #region Rezervacija SQL
+                
+                if(random.randint(0,100) % 40 == 0):
+
+                    rezervacijaSql = "INSERT INTO dbo.rezervacija(ime,prezime,kontaktTelefon,adresa,jePlaceno,kinoId,filmId,tipRezervacijeId,datum) VALUES ("
+                    
+                    identitet = identities[random.randint(0,len(identities) - 1)]
+
+                    values = [
+                        literalString(identitet[0]),
+                        literalString(identitet[1]),
+                        literalString(identitet[2]),
+                        literalString(identitet[3]),
+                        0 if random.randint(0,110) % 2 == 0 else 1,
+                        1,
+                        film,
+                        random.randint(1,4),
+                        literalString(SQLDate(datum))
+                    ]
+
+                    finalniSql += SQLCommaDelimitedValues(initialSQL=rezervacijaSql,values=values) + "\n"
+                
+                #endregion
+
                 #region Karta SQL
 
                 kartaSql = "INSERT INTO dbo.karta(filmId,cijena,jeIskoristena,sala,vrijemePrikazivanja,sjediste) VALUES ("
@@ -116,7 +149,7 @@ for film in range(brojFilmova):
                 finalniSql += SQLCommaDelimitedValues(initialSQL=racunSql,values=values) + "\n"
 
                 #endregion
-
+                
                 globalKarta += 1 # Povećava logički ID karte
                 globalRacun += 1 # Povećava logički ID racuna
                 sjedisteId += 1 # Povećava logički ID sjedista
@@ -133,5 +166,5 @@ for film in range(brojFilmova):
 
     finalniSql += "/* Kraj filma */ \n"
 
-sqlFile.write(finalniSql)
+sqlFile.write(str(finalniSql))
 sqlFile.close()
