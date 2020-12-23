@@ -68,22 +68,23 @@ for date in dates:
     for movie in fetch:
         details = json.loads(urllib.request.urlopen("https://api.themoviedb.org/3/movie/" + str(movie['id']) + "?api_key=ef57f4b4474cd9d6bd10f63b55c2bac9").read())
         
-        sql = "INSERT INTO dbo.film (naziv,zanrId,producent,datumIzdavanja,trajanjeUMinutama,dobnoOgranicenjeId,je3D,jeSinhronizovan,jeTitlovan,opis) VALUES ("
+        sql = "INSERT INTO dbo.film (naziv,zanrId,producent,datumIzdavanja,trajanjeUMinutama,dobnoOgranicenjeId,je3D,jeSinhronizovan,jeTitlovan,opis,procenatZarade) VALUES ("
 
         title = details['title'].replace("'","''")
         desc =  details['overview'].replace("'","''")
-
+   
         values = [
             "'" + title + "'",
             normalizeGenre(details['genres'][0]['name']), 
             "null" if len(details['production_companies']) == 0 else "'" + details['production_companies'][0]['name'] + "'", 
             "'" + details['release_date'] + "'",
             details['runtime'],
-            1 if details['adult'] else 2 if random.randint(0,10) % 5 == 0 else 3,
-            0 if random.randint(0,100) % 20 == 0 else 1, 
-            0 if random.randint(0,100) % 40 == 0 else 1, 
+            1 if random.randint(0,10) < 2 else 2 if random.randint(0,10) % 5 == 0 else 3 if random.randint(0,10) <= 7  else  4,
+            1 if random.randint(0,100) <= 20 else 0, 
+            1 if random.randint(0,100) <= 20 else 0, 
             1,
-            "'" + desc + "'"
+            "'" + desc + "'",
+            random.randint(0,55)
         ]
 
         
