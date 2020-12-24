@@ -1,0 +1,256 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="55784991-d032-4613-b9a1-4d5ac6a159e0" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Cinema DW</ID>
+  <Name>Cinema DW</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Cinema DW</DataSourceID>
+  <Schema>
+    <xs:schema id="Cinema_x0020_DW" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Cinema_x0020_DW" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="57477166-4518-4179-b111-85049bc45a21">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Dim_Datum" msprop:design-time-name="b8657c94-f3ab-46d0-a724-58bc4a103744" msprop:DbTableName="Dim_Datum" msprop:FriendlyName="Dim_Datum" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msprop:design-time-name="048c88f3-f713-4e76-aea2-d891cbd2be87" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:int" />
+                  <xs:element name="datum" msprop:design-time-name="1a8e24a8-94fc-47d6-bc93-d93133e2d30a" msprop:DbColumnName="datum" msprop:FriendlyName="datum" type="xs:dateTime" />
+                  <xs:element name="dan" msprop:design-time-name="962ecc52-cf3e-4289-919d-46b50298078c" msprop:DbColumnName="dan" msprop:FriendlyName="dan" type="xs:int" />
+                  <xs:element name="imeDana" msprop:design-time-name="1efdbf78-e254-4452-97c8-1a7329be882c" msprop:DbColumnName="imeDana" msprop:FriendlyName="imeDana">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="danSkraceno" msprop:design-time-name="6873fd9e-561e-45b0-bc6e-043a9003d61a" msprop:DbColumnName="danSkraceno" msprop:FriendlyName="danSkraceno">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="danUSedmici" msprop:design-time-name="34078c4b-a54a-4a3d-b79e-8c6d68685285" msprop:DbColumnName="danUSedmici" msprop:FriendlyName="danUSedmici" type="xs:int" />
+                  <xs:element name="danUTromjesecu" msprop:design-time-name="5db7b3de-ac9a-4a60-bffa-a8ad14d04f72" msprop:DbColumnName="danUTromjesecu" msprop:FriendlyName="danUTromjesecu" type="xs:int" />
+                  <xs:element name="danUGodini" msprop:design-time-name="69631eaa-de4e-4a5b-870d-29cf4ec783c4" msprop:DbColumnName="danUGodini" msprop:FriendlyName="danUGodini" type="xs:int" />
+                  <xs:element name="sedmica" msprop:design-time-name="cd358cfd-fcee-4dc2-b71e-1133b5aa032f" msprop:DbColumnName="sedmica" msprop:FriendlyName="sedmica" type="xs:int" />
+                  <xs:element name="mjesec" msprop:design-time-name="6c447288-8073-4ade-ba1d-cae70f74b486" msprop:DbColumnName="mjesec" msprop:FriendlyName="mjesec" type="xs:int" />
+                  <xs:element name="imeMjeseca" msprop:design-time-name="4844c1ea-bca2-4083-8629-5f76f9f0380a" msprop:DbColumnName="imeMjeseca" msprop:FriendlyName="imeMjeseca">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="kvartal" msprop:design-time-name="24344bba-3b26-49e0-ae47-062f404fb93d" msprop:DbColumnName="kvartal" msprop:FriendlyName="kvartal" type="xs:int" />
+                  <xs:element name="godina" msprop:design-time-name="2c0b0a7a-98a6-4223-bceb-04c8095ae84d" msprop:DbColumnName="godina" msprop:FriendlyName="godina" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Film" msprop:design-time-name="261207e4-9d65-4b4a-b1e7-56be00e1874c" msprop:DbTableName="Dim_Film" msprop:FriendlyName="Dim_Film" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="6d32f217-0b09-47c0-8e58-ced37a42f733" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:int" />
+                  <xs:element name="filmAltKey" msprop:design-time-name="02b2bdfd-1fa1-44ce-a6ca-f876b843e6b7" msprop:DbColumnName="filmAltKey" msprop:FriendlyName="filmAltKey" type="xs:int" />
+                  <xs:element name="zanrSifra" msprop:design-time-name="3d28c299-add0-4212-a8d5-add27ae88940" msprop:DbColumnName="zanrSifra" msprop:FriendlyName="zanrSifra">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="32" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="zanrNaziv" msprop:design-time-name="7bde81be-cc02-47ba-b4ac-181ac4eb3286" msprop:DbColumnName="zanrNaziv" msprop:FriendlyName="zanrNaziv">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="32" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="naziv" msprop:design-time-name="965ca0f9-7328-4746-adec-240268cf2267" msprop:DbColumnName="naziv" msprop:FriendlyName="naziv">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="128" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="trajanjeUMinutama" msprop:design-time-name="921f1b53-a732-4d84-acf5-b53c35894e77" msprop:DbColumnName="trajanjeUMinutama" msprop:FriendlyName="trajanjeUMinutama" type="xs:int" />
+                  <xs:element name="minimumGodina" msprop:design-time-name="69d64f7d-e571-4c83-97b6-315586a5a354" msprop:DbColumnName="minimumGodina" msprop:FriendlyName="minimumGodina" type="xs:int" />
+                  <xs:element name="je3D" msprop:design-time-name="0c93db47-1d79-48f2-8726-eae80410be50" msprop:DbColumnName="je3D" msprop:FriendlyName="je3D" type="xs:boolean" />
+                  <xs:element name="jeSinhronizovan" msprop:design-time-name="9ae043b6-f6c4-4f85-a698-891eb28bd44c" msprop:DbColumnName="jeSinhronizovan" msprop:FriendlyName="jeSinhronizovan" type="xs:boolean" />
+                  <xs:element name="jeTitlovan" msprop:design-time-name="e75e3bce-93e4-4225-bef6-da6305da8604" msprop:DbColumnName="jeTitlovan" msprop:FriendlyName="jeTitlovan" type="xs:boolean" />
+                  <xs:element name="procenatZarade" msprop:design-time-name="8d20b601-689c-4334-bc3b-f2aea21ea630" msprop:DbColumnName="procenatZarade" msprop:FriendlyName="procenatZarade" type="xs:int" />
+                  <xs:element name="procenatTroska" msprop:design-time-name="f9024815-740b-4da2-88d3-ca652d9b4fe6" msprop:DbColumnName="procenatTroska" msprop:FriendlyName="procenatTroska" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Karta" msprop:design-time-name="4f9ca131-b428-493c-a01e-d5b152c76de6" msprop:DbTableName="Dim_Karta" msprop:FriendlyName="Dim_Karta" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="dee33115-b1e8-44b8-ae8c-30b6ce919c1c" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:int" />
+                  <xs:element name="kartaAltKey" msprop:design-time-name="a703436e-5a5d-4fc1-9c3e-a8cc8738f6f2" msprop:DbColumnName="kartaAltKey" msprop:FriendlyName="kartaAltKey" type="xs:int" />
+                  <xs:element name="jeIskoristena" msprop:design-time-name="9331cf10-dcad-45a7-b681-20a049f06497" msprop:DbColumnName="jeIskoristena" msprop:FriendlyName="jeIskoristena" type="xs:boolean" />
+                  <xs:element name="salaNaziv" msprop:design-time-name="171ad7db-342b-4217-808a-d1f0da9a2243" msprop:DbColumnName="salaNaziv" msprop:FriendlyName="salaNaziv">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="32" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="jeNocnaProjekacija" msprop:design-time-name="531b7d5a-49c8-437c-a7e3-6e4426bdadb5" msprop:DbColumnName="jeNocnaProjekacija" msprop:FriendlyName="jeNocnaProjekacija" type="xs:boolean" />
+                  <xs:element name="jeRezervisana" msprop:design-time-name="d1cb87c7-85f2-47b9-85b5-ada222c5c8d2" msprop:DbColumnName="jeRezervisana" msprop:FriendlyName="jeRezervisana" type="xs:boolean" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_KinoLokacija" msprop:design-time-name="a767f4d3-26b7-4a27-8923-71e823fe719b" msprop:DbTableName="Dim_KinoLokacija" msprop:FriendlyName="Dim_KinoLokacija" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="57d9e6ab-bfbc-4a99-bce0-ef584e1a437e" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:int" />
+                  <xs:element name="kinoAltKey" msprop:design-time-name="bc55c4cb-67e7-4c31-82e4-74c6ac1c8ac4" msprop:DbColumnName="kinoAltKey" msprop:FriendlyName="kinoAltKey" type="xs:int" />
+                  <xs:element name="gradNaziv" msprop:design-time-name="d50638ab-4c5c-4084-aaf6-2aeef0073431" msprop:DbColumnName="gradNaziv" msprop:FriendlyName="gradNaziv">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="gradPostanskiBroj" msprop:design-time-name="d692507e-546c-4eef-979f-f2b214e78ec0" msprop:DbColumnName="gradPostanskiBroj" msprop:FriendlyName="gradPostanskiBroj" type="xs:int" />
+                  <xs:element name="gradBrojStanovnika" msprop:design-time-name="5ceedf23-212c-4b61-89e6-9ec21cadd103" msprop:DbColumnName="gradBrojStanovnika" msprop:FriendlyName="gradBrojStanovnika" type="xs:int" />
+                  <xs:element name="cijeliKontaktTelefon" msprop:design-time-name="8d41673e-89b0-478a-bef5-cf0223bf1e14" msprop:DbColumnName="cijeliKontaktTelefon" msprop:FriendlyName="cijeliKontaktTelefon">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="vrijemeOtvaranja" msprop:design-time-name="09ddf96c-78f4-47af-bccd-b33a66642a70" msprop:DbColumnName="vrijemeOtvaranja" msprop:FriendlyName="vrijemeOtvaranja" type="xs:int" />
+                  <xs:element name="vrijemeZatvaranja" msprop:design-time-name="b510484c-495d-44b2-8b44-f44af632fc4d" msprop:DbColumnName="vrijemeZatvaranja" msprop:FriendlyName="vrijemeZatvaranja" type="xs:int" />
+                  <xs:element name="radnoVrijemeUSatima" msprop:design-time-name="639dad57-294f-4fbc-a41f-7ad64217017d" msprop:DbColumnName="radnoVrijemeUSatima" msprop:FriendlyName="radnoVrijemeUSatima" type="xs:int" />
+                  <xs:element name="brojSala" msprop:design-time-name="27001560-e3e8-4e36-ac30-4f38e1cddab1" msprop:DbColumnName="brojSala" msprop:FriendlyName="brojSala" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_TipPlacanja" msprop:design-time-name="3d21eaa4-be75-416a-a145-0f64e49b21c0" msprop:DbTableName="Dim_TipPlacanja" msprop:FriendlyName="Dim_TipPlacanja" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msprop:design-time-name="036b1318-9448-44dd-9245-18e6bb54c2cd" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:int" />
+                  <xs:element name="naziv" msprop:design-time-name="bf95a3d0-4e1e-4942-a81a-0932b61f399d" msprop:DbColumnName="naziv" msprop:FriendlyName="naziv">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="64" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="sifra" msprop:design-time-name="0adc6883-9c55-44f8-830d-b81a85b2c149" msprop:DbColumnName="sifra" msprop:FriendlyName="sifra">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="32" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="datumDodavanja" msprop:design-time-name="bc8551f6-caa8-4ee9-933f-78186a946c49" msprop:DbColumnName="datumDodavanja" msprop:FriendlyName="datumDodavanja" type="xs:dateTime" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Fact_Racun" msprop:design-time-name="4ffed5b6-199c-4464-aaff-d5f30a949564" msprop:DbTableName="Fact_Racun" msprop:FriendlyName="Fact_Racun" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="d50ee213-f466-4389-8def-5d47c070e69e" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:int" />
+                  <xs:element name="kartaKey" msprop:design-time-name="6578edc7-3d3f-42b5-a728-43c4a3dea19d" msprop:DbColumnName="kartaKey" msprop:FriendlyName="kartaKey" type="xs:int" />
+                  <xs:element name="datumKey" msprop:design-time-name="f3b3cc57-8ec0-483b-9f14-e39dcdfbab31" msprop:DbColumnName="datumKey" msprop:FriendlyName="datumKey" type="xs:int" />
+                  <xs:element name="kinoKey" msprop:design-time-name="b14362a6-7870-4fba-a169-adc88feebcb3" msprop:DbColumnName="kinoKey" msprop:FriendlyName="kinoKey" type="xs:int" />
+                  <xs:element name="filmKey" msprop:design-time-name="f2194192-be84-4d6e-b6cc-020c463ada14" msprop:DbColumnName="filmKey" msprop:FriendlyName="filmKey" type="xs:int" />
+                  <xs:element name="tipPlacanjaKey" msprop:design-time-name="9eff4b05-2638-407e-9535-f9f939fb248f" msprop:DbColumnName="tipPlacanjaKey" msprop:FriendlyName="tipPlacanjaKey" type="xs:int" />
+                  <xs:element name="racunAltKey" msprop:design-time-name="e1427cae-57a8-403e-8307-23ef049fb1cd" msprop:DbColumnName="racunAltKey" msprop:FriendlyName="racunAltKey" type="xs:int" />
+                  <xs:element name="ukupnoNarudzbi" msprop:design-time-name="2d1dc074-814c-4d44-9a57-835b8f609e8b" msprop:DbColumnName="ukupnoNarudzbi" msprop:FriendlyName="ukupnoNarudzbi" type="xs:int" />
+                  <xs:element name="ukupnaCijenaNarudzbi" msprop:design-time-name="9356dde4-d41c-4864-98ca-be9d7268d192" msprop:DbColumnName="ukupnaCijenaNarudzbi" msprop:FriendlyName="ukupnaCijenaNarudzbi" type="xs:int" />
+                  <xs:element name="cijenaKarte" msprop:design-time-name="56d33dcf-9155-48da-89bd-444ece2ee17a" msprop:DbColumnName="cijenaKarte" msprop:FriendlyName="cijenaKarte" type="xs:int" />
+                  <xs:element name="ukupnaCijena" msprop:design-time-name="544728e4-018b-4a44-873c-cd0a5a3f8174" msprop:DbColumnName="ukupnaCijena" msprop:FriendlyName="ukupnaCijena" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Datum" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Film_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Film" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Karta_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Karta" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_KinoLokacija_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_KinoLokacija" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_TipPlacanja_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_TipPlacanja" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="dbo_Fact_Racun_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Fact_Racun" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:keyref name="FK_FactRacun_DimDatum" refer="Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Racun" />
+          <xs:field xpath="datumKey" />
+        </xs:keyref>
+        <xs:keyref name="FK_FactRacun_DimFilm" refer="dbo_Dim_Film_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Racun" />
+          <xs:field xpath="filmKey" />
+        </xs:keyref>
+        <xs:keyref name="FK_FactRacun_DimKino" refer="dbo_Dim_KinoLokacija_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Racun" />
+          <xs:field xpath="kinoKey" />
+        </xs:keyref>
+        <xs:keyref name="FK_FactRacun_DimTipPlacanja" refer="dbo_Dim_TipPlacanja_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Racun" />
+          <xs:field xpath="tipPlacanjaKey" />
+        </xs:keyref>
+        <xs:keyref name="FK_FactRacun_DimKarta" refer="dbo_Dim_Karta_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Racun" />
+          <xs:field xpath="kartaKey" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Cinema_x0020_DW xmlns="" />
+  </Schema>
+</DataSourceView>
