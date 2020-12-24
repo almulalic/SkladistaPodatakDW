@@ -81,7 +81,7 @@ kapacitetiSala = [
     [35,10,10,15,10],
     [25,10,15,10],
     [20,10,10,10],
-    [25,10,10,10],
+    [15,10,10,10],
     [20,10,10]
 ] # po gradovima
 
@@ -117,6 +117,8 @@ globalRating = 1 # Logički ID računa, odraz onog u fajlu
 for kino in range(brojGradova):
     
     print("Generisanje za grad " + gradovi[kino] + "...")
+    
+    datum = datetime.datetime(2019,1,7)
 
     for film in range(1,brojFilmova+1):
         
@@ -224,7 +226,7 @@ for kino in range(brojGradova):
                         globalRezervacijaId += 1
 
                 #region Rating/Ocjene
-                        
+                
                 brojUtisaka = random.randint(int(kupljenoKarti/2),kupljenoKarti) # Pretpostavljamo da neće svi kupiti kartu
                 prosjecnaOcjenaFilma = random.randint(1,5)
 

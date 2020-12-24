@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-QQC9I9V</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAn+YYiodLvkOxZM87S1oAZgAAAAACAAAAAAAQZgAAAAEAACAAAAC2UnEyeRx2XzmdVZC9xuKAt1isOxlzD0HH5+QGo/P+LgAAAAAOgAAAAAIAACAAAAD7U8xyReqzXG2Nl7410ZJ4Uc3lfFKojXCNFGY6qraR55AAAAB9/k6fP8FDyaPlCFXAfFVj3DDtlz875fEI/g/4F9lQPLYPEKVMT+SkYN/iFYqHnR0T2HOSCE1CHovnUmxqVkvWwdMLuQRA/1y6eqI9fMxYP67JUY4C9nIbE1n0L1tapsDcvVYE6fxUKct8uaOZ7tTdVURjiwOPTL0cTNej7ELpQFMgTTvTCfk9JwFOo1+HMENAAAAALdl6nfJqZVY5l88jZ4iLQ3kEyVwP09WOIF9bCf+aKHwc7GCicfo5+nJIu8UbGuBqt03zdhjP2yJ8GUgGspElbA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAn+YYiodLvkOxZM87S1oAZgAAAAACAAAAAAAQZgAAAAEAACAAAABCN9qz1lPRVy30Ku2SGt9+2qVgZ5x4RwutC29BnXxDcAAAAAAOgAAAAAIAACAAAAAO9wmDyRcWzLLjqFnyc/3ab2fQzJguFCq5bF65rtNRH5AAAAA9KcAFh7lSagVI7HQqAM+8RUuptv33UNgaGKOaMXPbmBRWSHiYfXhxQEI/njSzs293fSPIo8CpsMKoXitVFiogX9MM85VpObTT2uNDR9TmY0L8b3Hyt2j6DDQWZ8mcZNSGFArg1FI3UgS/F+p0Wlc6BKxii9VTpW6MvpWKcm4aLrDI0k/39+95eQ7xN+ioHH9AAAAA8ecZhPjWTKY3JOJayaJWQ5FfQrppE5kkQzGeHp61JSZecHpCR4bhsHyLvMo9vT9OSNz5ECUDfRjwT6Nb/SNuDQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -297,10 +297,10 @@
                 <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">4</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">49</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{19DC0E68-CF3C-4152-A95E-5C504223BFA6}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{248E81B4-CB36-400B-BE68-29319BE61402}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -540,6 +540,66 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.SQL.sql.ConnectByProxy">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.SQL.sql.ConnectionString">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">D:\Desktop\Projects\Python\SkladistaPodatakaSeminarski\SkladistaPodatakDW\DW\DimDates\SQL.sql</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.SQLData.sql.ConnectByProxy">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.SQLData.sql.ConnectionString">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">D:\Desktop\Projects\Python\SkladistaPodatakaSeminarski\SkladistaPodatakDW\DW\DimDates\SQLData.sql</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
