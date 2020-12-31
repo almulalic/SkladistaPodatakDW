@@ -11,8 +11,8 @@
   DTS:LocaleID="5146"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="59"
-  DTS:VersionGUID="{F89689E3-27A5-44A3-A7E9-AFC9458C15A2}">
+  DTS:VersionBuild="68"
+  DTS:VersionGUID="{498F3D44-A0CB-4A65-9576-DB0C793F7E7E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -126,396 +126,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <pipeline
-          version="1">
-          <components>
-            <component
-              refId="Package\Build Temp Kino_Rating\Dim Sala"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="Dim Sala"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Dim_Karta]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Build Temp Kino_Rating\Dim Sala.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-QQC9I9V.CinemaDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-QQC9I9V.CinemaDW]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Build Temp Kino_Rating\Dim Sala.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Build Temp Kino_Rating\Dim Sala.Inputs[OLE DB Destination Input].Columns[jeIskoristena]"
-                      cachedDataType="bool"
-                      cachedName="jeIskoristena"
-                      externalMetadataColumnId="Package\Build Temp Kino_Rating\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeIskoristena]"
-                      lineageId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Output].Columns[jeIskoristena]" />
-                    <inputColumn
-                      refId="Package\Build Temp Kino_Rating\Dim Sala.Inputs[OLE DB Destination Input].Columns[jeNocnaProjekcija]"
-                      cachedDataType="bool"
-                      cachedName="jeNocnaProjekcija"
-                      externalMetadataColumnId="Package\Build Temp Kino_Rating\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeNocnaProjekacija]"
-                      lineageId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Output].Columns[jeNocnaProjekcija]" />
-                    <inputColumn
-                      refId="Package\Build Temp Kino_Rating\Dim Sala.Inputs[OLE DB Destination Input].Columns[jeRezervisano]"
-                      cachedDataType="bool"
-                      cachedName="jeRezervisano"
-                      externalMetadataColumnId="Package\Build Temp Kino_Rating\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeRezervisana]"
-                      lineageId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Output].Columns[jeRezervisano]" />
-                    <inputColumn
-                      refId="Package\Build Temp Kino_Rating\Dim Sala.Inputs[OLE DB Destination Input].Columns[id]"
-                      cachedDataType="i8"
-                      cachedName="id"
-                      externalMetadataColumnId="Package\Build Temp Kino_Rating\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[kartaAltKey]"
-                      lineageId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Output].Columns[id]" />
-                    <inputColumn
-                      refId="Package\Build Temp Kino_Rating\Dim Sala.Inputs[OLE DB Destination Input].Columns[salaNaziv]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="32"
-                      cachedName="salaNaziv"
-                      externalMetadataColumnId="Package\Build Temp Kino_Rating\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[salaNaziv]"
-                      lineageId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Output].Columns[salaNaziv]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Build Temp Kino_Rating\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[id]"
-                      dataType="i4"
-                      name="id" />
-                    <externalMetadataColumn
-                      refId="Package\Build Temp Kino_Rating\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeIskoristena]"
-                      dataType="bool"
-                      name="jeIskoristena" />
-                    <externalMetadataColumn
-                      refId="Package\Build Temp Kino_Rating\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeNocnaProjekacija]"
-                      dataType="bool"
-                      name="jeNocnaProjekacija" />
-                    <externalMetadataColumn
-                      refId="Package\Build Temp Kino_Rating\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeRezervisana]"
-                      dataType="bool"
-                      name="jeRezervisana" />
-                    <externalMetadataColumn
-                      refId="Package\Build Temp Kino_Rating\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[kartaAltKey]"
-                      dataType="i4"
-                      name="kartaAltKey" />
-                    <externalMetadataColumn
-                      refId="Package\Build Temp Kino_Rating\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[salaNaziv]"
-                      codePage="1252"
-                      dataType="str"
-                      length="32"
-                      name="salaNaziv" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Build Temp Kino_Rating\Dim Sala.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Build Temp Kino_Rating\Dim Sala.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Build Temp Kino_Rating\Dim Sala.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Build Temp Kino_Rating\Dim Sala.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Build Temp Kino_Rating\Dim Sala.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Build Temp Kino_Rating\Dim Sala.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Build Temp Kino_Rating\Sala"
-              componentClassID="Microsoft.OLEDBSource"
-              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-              description="OLE DB Source"
-              name="Sala"
-              usesDispositions="true"
-              version="7">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset"></property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
-                  k.id, 
-	k.cijena 'cijena',
-	k.jeIskoristena 'jeIskoristena',
-	s.naziv 'salaNaziv',
-	CAST(CASE 
-			WHEN DATEPART(HOUR, k.vrijemePrikazivanja) &gt; 18 
-				THEN 1 
-			ELSE 0 
-		END AS bit) AS 'jeNocnaProjekcija',
-	CAST(CASE 
-			WHEN k.rezervacijaId IS NOT NULL 
-				THEN 1
-			ELSE 0 
-		END AS bit) AS 'jeRezervisano'
-FROM dbo.karta k,dbo.sala s
-WHERE k.salaId = s.id;</property>
-                <property
-                  dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">2</property>
-                <property
-                  dataType="System.String"
-                  description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Build Temp Kino_Rating\Sala.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-QQC9I9V.CinemaDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-QQC9I9V.CinemaDB]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Output]"
-                  name="OLE DB Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Output].Columns[cijena]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Output].ExternalColumns[cijena]"
-                      lineageId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Output].Columns[cijena]"
-                      name="cijena"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Output].Columns[jeIskoristena]"
-                      dataType="bool"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeIskoristena]"
-                      lineageId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Output].Columns[jeIskoristena]"
-                      name="jeIskoristena"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Output].Columns[jeNocnaProjekcija]"
-                      dataType="bool"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeNocnaProjekcija]"
-                      lineageId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Output].Columns[jeNocnaProjekcija]"
-                      name="jeNocnaProjekcija"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Output].Columns[jeRezervisano]"
-                      dataType="bool"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeRezervisano]"
-                      lineageId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Output].Columns[jeRezervisano]"
-                      name="jeRezervisano"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Output].Columns[id]"
-                      dataType="i8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Output].ExternalColumns[id]"
-                      lineageId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Output].Columns[id]"
-                      name="id"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Output].Columns[salaNaziv]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Output].ExternalColumns[salaNaziv]"
-                      length="32"
-                      lineageId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Output].Columns[salaNaziv]"
-                      name="salaNaziv"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Output].ExternalColumns[cijena]"
-                      dataType="r8"
-                      name="cijena" />
-                    <externalMetadataColumn
-                      refId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeIskoristena]"
-                      dataType="bool"
-                      name="jeIskoristena" />
-                    <externalMetadataColumn
-                      refId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeNocnaProjekcija]"
-                      dataType="bool"
-                      name="jeNocnaProjekcija" />
-                    <externalMetadataColumn
-                      refId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeRezervisano]"
-                      dataType="bool"
-                      name="jeRezervisano" />
-                    <externalMetadataColumn
-                      refId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Output].ExternalColumns[id]"
-                      dataType="i8"
-                      name="id" />
-                    <externalMetadataColumn
-                      refId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Output].ExternalColumns[salaNaziv]"
-                      codePage="1252"
-                      dataType="str"
-                      length="32"
-                      name="salaNaziv" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Error Output]"
-                  isErrorOut="true"
-                  name="OLE DB Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Error Output].Columns[id]"
-                      dataType="i8"
-                      lineageId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Error Output].Columns[id]"
-                      name="id" />
-                    <outputColumn
-                      refId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Error Output].Columns[cijena]"
-                      dataType="r8"
-                      lineageId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Error Output].Columns[cijena]"
-                      name="cijena" />
-                    <outputColumn
-                      refId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Error Output].Columns[jeIskoristena]"
-                      dataType="bool"
-                      lineageId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Error Output].Columns[jeIskoristena]"
-                      name="jeIskoristena" />
-                    <outputColumn
-                      refId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Error Output].Columns[salaNaziv]"
-                      codePage="1252"
-                      dataType="str"
-                      length="32"
-                      lineageId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Error Output].Columns[salaNaziv]"
-                      name="salaNaziv" />
-                    <outputColumn
-                      refId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Error Output].Columns[jeNocnaProjekcija]"
-                      dataType="bool"
-                      lineageId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Error Output].Columns[jeNocnaProjekcija]"
-                      name="jeNocnaProjekcija" />
-                    <outputColumn
-                      refId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Error Output].Columns[jeRezervisano]"
-                      dataType="bool"
-                      lineageId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Error Output].Columns[jeRezervisano]"
-                      name="jeRezervisano" />
-                    <outputColumn
-                      refId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-          </components>
-          <paths>
-            <path
-              refId="Package\Build Temp Kino_Rating.Paths[OLE DB Source Output]"
-              endId="Package\Build Temp Kino_Rating\Dim Sala.Inputs[OLE DB Destination Input]"
-              name="OLE DB Source Output"
-              startId="Package\Build Temp Kino_Rating\Sala.Outputs[OLE DB Source Output]" />
-          </paths>
-        </pipeline>
+          version="1" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -3049,396 +2660,7 @@ WHERE k.gradId = g.id;</property>
       <DTS:Variables />
       <DTS:ObjectData>
         <pipeline
-          version="1">
-          <components>
-            <component
-              refId="Package\Import Rating Banja Luka\Dim Sala"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="Dim Sala"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Dim_Karta]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Import Rating Banja Luka\Dim Sala.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-QQC9I9V.CinemaDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-QQC9I9V.CinemaDW]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Import Rating Banja Luka\Dim Sala.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Import Rating Banja Luka\Dim Sala.Inputs[OLE DB Destination Input].Columns[jeIskoristena]"
-                      cachedDataType="bool"
-                      cachedName="jeIskoristena"
-                      externalMetadataColumnId="Package\Import Rating Banja Luka\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeIskoristena]"
-                      lineageId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Output].Columns[jeIskoristena]" />
-                    <inputColumn
-                      refId="Package\Import Rating Banja Luka\Dim Sala.Inputs[OLE DB Destination Input].Columns[jeNocnaProjekcija]"
-                      cachedDataType="bool"
-                      cachedName="jeNocnaProjekcija"
-                      externalMetadataColumnId="Package\Import Rating Banja Luka\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeNocnaProjekacija]"
-                      lineageId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Output].Columns[jeNocnaProjekcija]" />
-                    <inputColumn
-                      refId="Package\Import Rating Banja Luka\Dim Sala.Inputs[OLE DB Destination Input].Columns[jeRezervisano]"
-                      cachedDataType="bool"
-                      cachedName="jeRezervisano"
-                      externalMetadataColumnId="Package\Import Rating Banja Luka\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeRezervisana]"
-                      lineageId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Output].Columns[jeRezervisano]" />
-                    <inputColumn
-                      refId="Package\Import Rating Banja Luka\Dim Sala.Inputs[OLE DB Destination Input].Columns[id]"
-                      cachedDataType="i8"
-                      cachedName="id"
-                      externalMetadataColumnId="Package\Import Rating Banja Luka\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[kartaAltKey]"
-                      lineageId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Output].Columns[id]" />
-                    <inputColumn
-                      refId="Package\Import Rating Banja Luka\Dim Sala.Inputs[OLE DB Destination Input].Columns[salaNaziv]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="32"
-                      cachedName="salaNaziv"
-                      externalMetadataColumnId="Package\Import Rating Banja Luka\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[salaNaziv]"
-                      lineageId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Output].Columns[salaNaziv]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Banja Luka\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[id]"
-                      dataType="i4"
-                      name="id" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Banja Luka\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeIskoristena]"
-                      dataType="bool"
-                      name="jeIskoristena" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Banja Luka\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeNocnaProjekacija]"
-                      dataType="bool"
-                      name="jeNocnaProjekacija" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Banja Luka\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeRezervisana]"
-                      dataType="bool"
-                      name="jeRezervisana" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Banja Luka\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[kartaAltKey]"
-                      dataType="i4"
-                      name="kartaAltKey" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Banja Luka\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[salaNaziv]"
-                      codePage="1252"
-                      dataType="str"
-                      length="32"
-                      name="salaNaziv" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Import Rating Banja Luka\Dim Sala.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Import Rating Banja Luka\Dim Sala.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Import Rating Banja Luka\Dim Sala.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Import Rating Banja Luka\Dim Sala.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Import Rating Banja Luka\Dim Sala.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Import Rating Banja Luka\Dim Sala.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Import Rating Banja Luka\Sala"
-              componentClassID="Microsoft.OLEDBSource"
-              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-              description="OLE DB Source"
-              name="Sala"
-              usesDispositions="true"
-              version="7">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset"></property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
-                  k.id, 
-	k.cijena 'cijena',
-	k.jeIskoristena 'jeIskoristena',
-	s.naziv 'salaNaziv',
-	CAST(CASE 
-			WHEN DATEPART(HOUR, k.vrijemePrikazivanja) &gt; 18 
-				THEN 1 
-			ELSE 0 
-		END AS bit) AS 'jeNocnaProjekcija',
-	CAST(CASE 
-			WHEN k.rezervacijaId IS NOT NULL 
-				THEN 1
-			ELSE 0 
-		END AS bit) AS 'jeRezervisano'
-FROM dbo.karta k,dbo.sala s
-WHERE k.salaId = s.id;</property>
-                <property
-                  dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">2</property>
-                <property
-                  dataType="System.String"
-                  description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Import Rating Banja Luka\Sala.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-QQC9I9V.CinemaDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-QQC9I9V.CinemaDB]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Output]"
-                  name="OLE DB Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Output].Columns[cijena]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Output].ExternalColumns[cijena]"
-                      lineageId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Output].Columns[cijena]"
-                      name="cijena"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Output].Columns[jeIskoristena]"
-                      dataType="bool"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeIskoristena]"
-                      lineageId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Output].Columns[jeIskoristena]"
-                      name="jeIskoristena"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Output].Columns[jeNocnaProjekcija]"
-                      dataType="bool"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeNocnaProjekcija]"
-                      lineageId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Output].Columns[jeNocnaProjekcija]"
-                      name="jeNocnaProjekcija"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Output].Columns[jeRezervisano]"
-                      dataType="bool"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeRezervisano]"
-                      lineageId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Output].Columns[jeRezervisano]"
-                      name="jeRezervisano"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Output].Columns[id]"
-                      dataType="i8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Output].ExternalColumns[id]"
-                      lineageId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Output].Columns[id]"
-                      name="id"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Output].Columns[salaNaziv]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Output].ExternalColumns[salaNaziv]"
-                      length="32"
-                      lineageId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Output].Columns[salaNaziv]"
-                      name="salaNaziv"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Output].ExternalColumns[cijena]"
-                      dataType="r8"
-                      name="cijena" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeIskoristena]"
-                      dataType="bool"
-                      name="jeIskoristena" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeNocnaProjekcija]"
-                      dataType="bool"
-                      name="jeNocnaProjekcija" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeRezervisano]"
-                      dataType="bool"
-                      name="jeRezervisano" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Output].ExternalColumns[id]"
-                      dataType="i8"
-                      name="id" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Output].ExternalColumns[salaNaziv]"
-                      codePage="1252"
-                      dataType="str"
-                      length="32"
-                      name="salaNaziv" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Error Output]"
-                  isErrorOut="true"
-                  name="OLE DB Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Error Output].Columns[id]"
-                      dataType="i8"
-                      lineageId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Error Output].Columns[id]"
-                      name="id" />
-                    <outputColumn
-                      refId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Error Output].Columns[cijena]"
-                      dataType="r8"
-                      lineageId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Error Output].Columns[cijena]"
-                      name="cijena" />
-                    <outputColumn
-                      refId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Error Output].Columns[jeIskoristena]"
-                      dataType="bool"
-                      lineageId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Error Output].Columns[jeIskoristena]"
-                      name="jeIskoristena" />
-                    <outputColumn
-                      refId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Error Output].Columns[salaNaziv]"
-                      codePage="1252"
-                      dataType="str"
-                      length="32"
-                      lineageId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Error Output].Columns[salaNaziv]"
-                      name="salaNaziv" />
-                    <outputColumn
-                      refId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Error Output].Columns[jeNocnaProjekcija]"
-                      dataType="bool"
-                      lineageId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Error Output].Columns[jeNocnaProjekcija]"
-                      name="jeNocnaProjekcija" />
-                    <outputColumn
-                      refId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Error Output].Columns[jeRezervisano]"
-                      dataType="bool"
-                      lineageId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Error Output].Columns[jeRezervisano]"
-                      name="jeRezervisano" />
-                    <outputColumn
-                      refId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-          </components>
-          <paths>
-            <path
-              refId="Package\Import Rating Banja Luka.Paths[OLE DB Source Output]"
-              endId="Package\Import Rating Banja Luka\Dim Sala.Inputs[OLE DB Destination Input]"
-              name="OLE DB Source Output"
-              startId="Package\Import Rating Banja Luka\Sala.Outputs[OLE DB Source Output]" />
-          </paths>
-        </pipeline>
+          version="1" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -3453,396 +2675,7 @@ WHERE k.salaId = s.id;</property>
       <DTS:Variables />
       <DTS:ObjectData>
         <pipeline
-          version="1">
-          <components>
-            <component
-              refId="Package\Import Rating Bihac\Dim Sala"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="Dim Sala"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Dim_Karta]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Import Rating Bihac\Dim Sala.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-QQC9I9V.CinemaDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-QQC9I9V.CinemaDW]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Import Rating Bihac\Dim Sala.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Import Rating Bihac\Dim Sala.Inputs[OLE DB Destination Input].Columns[jeIskoristena]"
-                      cachedDataType="bool"
-                      cachedName="jeIskoristena"
-                      externalMetadataColumnId="Package\Import Rating Bihac\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeIskoristena]"
-                      lineageId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Output].Columns[jeIskoristena]" />
-                    <inputColumn
-                      refId="Package\Import Rating Bihac\Dim Sala.Inputs[OLE DB Destination Input].Columns[jeNocnaProjekcija]"
-                      cachedDataType="bool"
-                      cachedName="jeNocnaProjekcija"
-                      externalMetadataColumnId="Package\Import Rating Bihac\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeNocnaProjekacija]"
-                      lineageId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Output].Columns[jeNocnaProjekcija]" />
-                    <inputColumn
-                      refId="Package\Import Rating Bihac\Dim Sala.Inputs[OLE DB Destination Input].Columns[jeRezervisano]"
-                      cachedDataType="bool"
-                      cachedName="jeRezervisano"
-                      externalMetadataColumnId="Package\Import Rating Bihac\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeRezervisana]"
-                      lineageId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Output].Columns[jeRezervisano]" />
-                    <inputColumn
-                      refId="Package\Import Rating Bihac\Dim Sala.Inputs[OLE DB Destination Input].Columns[id]"
-                      cachedDataType="i8"
-                      cachedName="id"
-                      externalMetadataColumnId="Package\Import Rating Bihac\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[kartaAltKey]"
-                      lineageId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Output].Columns[id]" />
-                    <inputColumn
-                      refId="Package\Import Rating Bihac\Dim Sala.Inputs[OLE DB Destination Input].Columns[salaNaziv]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="32"
-                      cachedName="salaNaziv"
-                      externalMetadataColumnId="Package\Import Rating Bihac\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[salaNaziv]"
-                      lineageId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Output].Columns[salaNaziv]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Bihac\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[id]"
-                      dataType="i4"
-                      name="id" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Bihac\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeIskoristena]"
-                      dataType="bool"
-                      name="jeIskoristena" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Bihac\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeNocnaProjekacija]"
-                      dataType="bool"
-                      name="jeNocnaProjekacija" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Bihac\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeRezervisana]"
-                      dataType="bool"
-                      name="jeRezervisana" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Bihac\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[kartaAltKey]"
-                      dataType="i4"
-                      name="kartaAltKey" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Bihac\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[salaNaziv]"
-                      codePage="1252"
-                      dataType="str"
-                      length="32"
-                      name="salaNaziv" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Import Rating Bihac\Dim Sala.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Import Rating Bihac\Dim Sala.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Import Rating Bihac\Dim Sala.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Import Rating Bihac\Dim Sala.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Import Rating Bihac\Dim Sala.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Import Rating Bihac\Dim Sala.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Import Rating Bihac\Sala"
-              componentClassID="Microsoft.OLEDBSource"
-              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-              description="OLE DB Source"
-              name="Sala"
-              usesDispositions="true"
-              version="7">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset"></property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
-                  k.id, 
-	k.cijena 'cijena',
-	k.jeIskoristena 'jeIskoristena',
-	s.naziv 'salaNaziv',
-	CAST(CASE 
-			WHEN DATEPART(HOUR, k.vrijemePrikazivanja) &gt; 18 
-				THEN 1 
-			ELSE 0 
-		END AS bit) AS 'jeNocnaProjekcija',
-	CAST(CASE 
-			WHEN k.rezervacijaId IS NOT NULL 
-				THEN 1
-			ELSE 0 
-		END AS bit) AS 'jeRezervisano'
-FROM dbo.karta k,dbo.sala s
-WHERE k.salaId = s.id;</property>
-                <property
-                  dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">2</property>
-                <property
-                  dataType="System.String"
-                  description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Import Rating Bihac\Sala.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-QQC9I9V.CinemaDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-QQC9I9V.CinemaDB]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Output]"
-                  name="OLE DB Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Output].Columns[cijena]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Output].ExternalColumns[cijena]"
-                      lineageId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Output].Columns[cijena]"
-                      name="cijena"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Output].Columns[jeIskoristena]"
-                      dataType="bool"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeIskoristena]"
-                      lineageId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Output].Columns[jeIskoristena]"
-                      name="jeIskoristena"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Output].Columns[jeNocnaProjekcija]"
-                      dataType="bool"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeNocnaProjekcija]"
-                      lineageId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Output].Columns[jeNocnaProjekcija]"
-                      name="jeNocnaProjekcija"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Output].Columns[jeRezervisano]"
-                      dataType="bool"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeRezervisano]"
-                      lineageId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Output].Columns[jeRezervisano]"
-                      name="jeRezervisano"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Output].Columns[id]"
-                      dataType="i8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Output].ExternalColumns[id]"
-                      lineageId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Output].Columns[id]"
-                      name="id"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Output].Columns[salaNaziv]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Output].ExternalColumns[salaNaziv]"
-                      length="32"
-                      lineageId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Output].Columns[salaNaziv]"
-                      name="salaNaziv"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Output].ExternalColumns[cijena]"
-                      dataType="r8"
-                      name="cijena" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeIskoristena]"
-                      dataType="bool"
-                      name="jeIskoristena" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeNocnaProjekcija]"
-                      dataType="bool"
-                      name="jeNocnaProjekcija" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeRezervisano]"
-                      dataType="bool"
-                      name="jeRezervisano" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Output].ExternalColumns[id]"
-                      dataType="i8"
-                      name="id" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Output].ExternalColumns[salaNaziv]"
-                      codePage="1252"
-                      dataType="str"
-                      length="32"
-                      name="salaNaziv" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Error Output]"
-                  isErrorOut="true"
-                  name="OLE DB Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Error Output].Columns[id]"
-                      dataType="i8"
-                      lineageId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Error Output].Columns[id]"
-                      name="id" />
-                    <outputColumn
-                      refId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Error Output].Columns[cijena]"
-                      dataType="r8"
-                      lineageId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Error Output].Columns[cijena]"
-                      name="cijena" />
-                    <outputColumn
-                      refId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Error Output].Columns[jeIskoristena]"
-                      dataType="bool"
-                      lineageId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Error Output].Columns[jeIskoristena]"
-                      name="jeIskoristena" />
-                    <outputColumn
-                      refId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Error Output].Columns[salaNaziv]"
-                      codePage="1252"
-                      dataType="str"
-                      length="32"
-                      lineageId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Error Output].Columns[salaNaziv]"
-                      name="salaNaziv" />
-                    <outputColumn
-                      refId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Error Output].Columns[jeNocnaProjekcija]"
-                      dataType="bool"
-                      lineageId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Error Output].Columns[jeNocnaProjekcija]"
-                      name="jeNocnaProjekcija" />
-                    <outputColumn
-                      refId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Error Output].Columns[jeRezervisano]"
-                      dataType="bool"
-                      lineageId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Error Output].Columns[jeRezervisano]"
-                      name="jeRezervisano" />
-                    <outputColumn
-                      refId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-          </components>
-          <paths>
-            <path
-              refId="Package\Import Rating Bihac.Paths[OLE DB Source Output]"
-              endId="Package\Import Rating Bihac\Dim Sala.Inputs[OLE DB Destination Input]"
-              name="OLE DB Source Output"
-              startId="Package\Import Rating Bihac\Sala.Outputs[OLE DB Source Output]" />
-          </paths>
-        </pipeline>
+          version="1" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -3857,396 +2690,7 @@ WHERE k.salaId = s.id;</property>
       <DTS:Variables />
       <DTS:ObjectData>
         <pipeline
-          version="1">
-          <components>
-            <component
-              refId="Package\Import Rating Mostar\Dim Sala"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="Dim Sala"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Dim_Karta]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Import Rating Mostar\Dim Sala.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-QQC9I9V.CinemaDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-QQC9I9V.CinemaDW]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Import Rating Mostar\Dim Sala.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Import Rating Mostar\Dim Sala.Inputs[OLE DB Destination Input].Columns[jeIskoristena]"
-                      cachedDataType="bool"
-                      cachedName="jeIskoristena"
-                      externalMetadataColumnId="Package\Import Rating Mostar\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeIskoristena]"
-                      lineageId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Output].Columns[jeIskoristena]" />
-                    <inputColumn
-                      refId="Package\Import Rating Mostar\Dim Sala.Inputs[OLE DB Destination Input].Columns[jeNocnaProjekcija]"
-                      cachedDataType="bool"
-                      cachedName="jeNocnaProjekcija"
-                      externalMetadataColumnId="Package\Import Rating Mostar\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeNocnaProjekacija]"
-                      lineageId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Output].Columns[jeNocnaProjekcija]" />
-                    <inputColumn
-                      refId="Package\Import Rating Mostar\Dim Sala.Inputs[OLE DB Destination Input].Columns[jeRezervisano]"
-                      cachedDataType="bool"
-                      cachedName="jeRezervisano"
-                      externalMetadataColumnId="Package\Import Rating Mostar\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeRezervisana]"
-                      lineageId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Output].Columns[jeRezervisano]" />
-                    <inputColumn
-                      refId="Package\Import Rating Mostar\Dim Sala.Inputs[OLE DB Destination Input].Columns[id]"
-                      cachedDataType="i8"
-                      cachedName="id"
-                      externalMetadataColumnId="Package\Import Rating Mostar\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[kartaAltKey]"
-                      lineageId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Output].Columns[id]" />
-                    <inputColumn
-                      refId="Package\Import Rating Mostar\Dim Sala.Inputs[OLE DB Destination Input].Columns[salaNaziv]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="32"
-                      cachedName="salaNaziv"
-                      externalMetadataColumnId="Package\Import Rating Mostar\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[salaNaziv]"
-                      lineageId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Output].Columns[salaNaziv]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Mostar\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[id]"
-                      dataType="i4"
-                      name="id" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Mostar\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeIskoristena]"
-                      dataType="bool"
-                      name="jeIskoristena" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Mostar\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeNocnaProjekacija]"
-                      dataType="bool"
-                      name="jeNocnaProjekacija" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Mostar\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeRezervisana]"
-                      dataType="bool"
-                      name="jeRezervisana" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Mostar\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[kartaAltKey]"
-                      dataType="i4"
-                      name="kartaAltKey" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Mostar\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[salaNaziv]"
-                      codePage="1252"
-                      dataType="str"
-                      length="32"
-                      name="salaNaziv" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Import Rating Mostar\Dim Sala.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Import Rating Mostar\Dim Sala.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Import Rating Mostar\Dim Sala.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Import Rating Mostar\Dim Sala.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Import Rating Mostar\Dim Sala.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Import Rating Mostar\Dim Sala.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Import Rating Mostar\Sala"
-              componentClassID="Microsoft.OLEDBSource"
-              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-              description="OLE DB Source"
-              name="Sala"
-              usesDispositions="true"
-              version="7">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset"></property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
-                  k.id, 
-	k.cijena 'cijena',
-	k.jeIskoristena 'jeIskoristena',
-	s.naziv 'salaNaziv',
-	CAST(CASE 
-			WHEN DATEPART(HOUR, k.vrijemePrikazivanja) &gt; 18 
-				THEN 1 
-			ELSE 0 
-		END AS bit) AS 'jeNocnaProjekcija',
-	CAST(CASE 
-			WHEN k.rezervacijaId IS NOT NULL 
-				THEN 1
-			ELSE 0 
-		END AS bit) AS 'jeRezervisano'
-FROM dbo.karta k,dbo.sala s
-WHERE k.salaId = s.id;</property>
-                <property
-                  dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">2</property>
-                <property
-                  dataType="System.String"
-                  description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Import Rating Mostar\Sala.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-QQC9I9V.CinemaDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-QQC9I9V.CinemaDB]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Output]"
-                  name="OLE DB Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Output].Columns[cijena]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Output].ExternalColumns[cijena]"
-                      lineageId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Output].Columns[cijena]"
-                      name="cijena"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Output].Columns[jeIskoristena]"
-                      dataType="bool"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeIskoristena]"
-                      lineageId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Output].Columns[jeIskoristena]"
-                      name="jeIskoristena"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Output].Columns[jeNocnaProjekcija]"
-                      dataType="bool"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeNocnaProjekcija]"
-                      lineageId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Output].Columns[jeNocnaProjekcija]"
-                      name="jeNocnaProjekcija"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Output].Columns[jeRezervisano]"
-                      dataType="bool"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeRezervisano]"
-                      lineageId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Output].Columns[jeRezervisano]"
-                      name="jeRezervisano"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Output].Columns[id]"
-                      dataType="i8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Output].ExternalColumns[id]"
-                      lineageId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Output].Columns[id]"
-                      name="id"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Output].Columns[salaNaziv]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Output].ExternalColumns[salaNaziv]"
-                      length="32"
-                      lineageId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Output].Columns[salaNaziv]"
-                      name="salaNaziv"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Output].ExternalColumns[cijena]"
-                      dataType="r8"
-                      name="cijena" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeIskoristena]"
-                      dataType="bool"
-                      name="jeIskoristena" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeNocnaProjekcija]"
-                      dataType="bool"
-                      name="jeNocnaProjekcija" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeRezervisano]"
-                      dataType="bool"
-                      name="jeRezervisano" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Output].ExternalColumns[id]"
-                      dataType="i8"
-                      name="id" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Output].ExternalColumns[salaNaziv]"
-                      codePage="1252"
-                      dataType="str"
-                      length="32"
-                      name="salaNaziv" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Error Output]"
-                  isErrorOut="true"
-                  name="OLE DB Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Error Output].Columns[id]"
-                      dataType="i8"
-                      lineageId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Error Output].Columns[id]"
-                      name="id" />
-                    <outputColumn
-                      refId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Error Output].Columns[cijena]"
-                      dataType="r8"
-                      lineageId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Error Output].Columns[cijena]"
-                      name="cijena" />
-                    <outputColumn
-                      refId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Error Output].Columns[jeIskoristena]"
-                      dataType="bool"
-                      lineageId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Error Output].Columns[jeIskoristena]"
-                      name="jeIskoristena" />
-                    <outputColumn
-                      refId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Error Output].Columns[salaNaziv]"
-                      codePage="1252"
-                      dataType="str"
-                      length="32"
-                      lineageId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Error Output].Columns[salaNaziv]"
-                      name="salaNaziv" />
-                    <outputColumn
-                      refId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Error Output].Columns[jeNocnaProjekcija]"
-                      dataType="bool"
-                      lineageId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Error Output].Columns[jeNocnaProjekcija]"
-                      name="jeNocnaProjekcija" />
-                    <outputColumn
-                      refId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Error Output].Columns[jeRezervisano]"
-                      dataType="bool"
-                      lineageId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Error Output].Columns[jeRezervisano]"
-                      name="jeRezervisano" />
-                    <outputColumn
-                      refId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-          </components>
-          <paths>
-            <path
-              refId="Package\Import Rating Mostar.Paths[OLE DB Source Output]"
-              endId="Package\Import Rating Mostar\Dim Sala.Inputs[OLE DB Destination Input]"
-              name="OLE DB Source Output"
-              startId="Package\Import Rating Mostar\Sala.Outputs[OLE DB Source Output]" />
-          </paths>
-        </pipeline>
+          version="1" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -4261,396 +2705,7 @@ WHERE k.salaId = s.id;</property>
       <DTS:Variables />
       <DTS:ObjectData>
         <pipeline
-          version="1">
-          <components>
-            <component
-              refId="Package\Import Rating Sarajevo\Dim Sala"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="Dim Sala"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Dim_Karta]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Import Rating Sarajevo\Dim Sala.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-QQC9I9V.CinemaDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-QQC9I9V.CinemaDW]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Import Rating Sarajevo\Dim Sala.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Import Rating Sarajevo\Dim Sala.Inputs[OLE DB Destination Input].Columns[jeIskoristena]"
-                      cachedDataType="bool"
-                      cachedName="jeIskoristena"
-                      externalMetadataColumnId="Package\Import Rating Sarajevo\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeIskoristena]"
-                      lineageId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Output].Columns[jeIskoristena]" />
-                    <inputColumn
-                      refId="Package\Import Rating Sarajevo\Dim Sala.Inputs[OLE DB Destination Input].Columns[jeNocnaProjekcija]"
-                      cachedDataType="bool"
-                      cachedName="jeNocnaProjekcija"
-                      externalMetadataColumnId="Package\Import Rating Sarajevo\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeNocnaProjekacija]"
-                      lineageId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Output].Columns[jeNocnaProjekcija]" />
-                    <inputColumn
-                      refId="Package\Import Rating Sarajevo\Dim Sala.Inputs[OLE DB Destination Input].Columns[jeRezervisano]"
-                      cachedDataType="bool"
-                      cachedName="jeRezervisano"
-                      externalMetadataColumnId="Package\Import Rating Sarajevo\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeRezervisana]"
-                      lineageId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Output].Columns[jeRezervisano]" />
-                    <inputColumn
-                      refId="Package\Import Rating Sarajevo\Dim Sala.Inputs[OLE DB Destination Input].Columns[id]"
-                      cachedDataType="i8"
-                      cachedName="id"
-                      externalMetadataColumnId="Package\Import Rating Sarajevo\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[kartaAltKey]"
-                      lineageId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Output].Columns[id]" />
-                    <inputColumn
-                      refId="Package\Import Rating Sarajevo\Dim Sala.Inputs[OLE DB Destination Input].Columns[salaNaziv]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="32"
-                      cachedName="salaNaziv"
-                      externalMetadataColumnId="Package\Import Rating Sarajevo\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[salaNaziv]"
-                      lineageId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Output].Columns[salaNaziv]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Sarajevo\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[id]"
-                      dataType="i4"
-                      name="id" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Sarajevo\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeIskoristena]"
-                      dataType="bool"
-                      name="jeIskoristena" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Sarajevo\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeNocnaProjekacija]"
-                      dataType="bool"
-                      name="jeNocnaProjekacija" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Sarajevo\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeRezervisana]"
-                      dataType="bool"
-                      name="jeRezervisana" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Sarajevo\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[kartaAltKey]"
-                      dataType="i4"
-                      name="kartaAltKey" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Sarajevo\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[salaNaziv]"
-                      codePage="1252"
-                      dataType="str"
-                      length="32"
-                      name="salaNaziv" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Import Rating Sarajevo\Dim Sala.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Import Rating Sarajevo\Dim Sala.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Import Rating Sarajevo\Dim Sala.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Import Rating Sarajevo\Dim Sala.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Import Rating Sarajevo\Dim Sala.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Import Rating Sarajevo\Dim Sala.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Import Rating Sarajevo\Sala"
-              componentClassID="Microsoft.OLEDBSource"
-              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-              description="OLE DB Source"
-              name="Sala"
-              usesDispositions="true"
-              version="7">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset"></property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
-                  k.id, 
-	k.cijena 'cijena',
-	k.jeIskoristena 'jeIskoristena',
-	s.naziv 'salaNaziv',
-	CAST(CASE 
-			WHEN DATEPART(HOUR, k.vrijemePrikazivanja) &gt; 18 
-				THEN 1 
-			ELSE 0 
-		END AS bit) AS 'jeNocnaProjekcija',
-	CAST(CASE 
-			WHEN k.rezervacijaId IS NOT NULL 
-				THEN 1
-			ELSE 0 
-		END AS bit) AS 'jeRezervisano'
-FROM dbo.karta k,dbo.sala s
-WHERE k.salaId = s.id;</property>
-                <property
-                  dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">2</property>
-                <property
-                  dataType="System.String"
-                  description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Import Rating Sarajevo\Sala.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-QQC9I9V.CinemaDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-QQC9I9V.CinemaDB]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Output]"
-                  name="OLE DB Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Output].Columns[cijena]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Output].ExternalColumns[cijena]"
-                      lineageId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Output].Columns[cijena]"
-                      name="cijena"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Output].Columns[jeIskoristena]"
-                      dataType="bool"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeIskoristena]"
-                      lineageId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Output].Columns[jeIskoristena]"
-                      name="jeIskoristena"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Output].Columns[jeNocnaProjekcija]"
-                      dataType="bool"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeNocnaProjekcija]"
-                      lineageId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Output].Columns[jeNocnaProjekcija]"
-                      name="jeNocnaProjekcija"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Output].Columns[jeRezervisano]"
-                      dataType="bool"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeRezervisano]"
-                      lineageId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Output].Columns[jeRezervisano]"
-                      name="jeRezervisano"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Output].Columns[id]"
-                      dataType="i8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Output].ExternalColumns[id]"
-                      lineageId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Output].Columns[id]"
-                      name="id"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Output].Columns[salaNaziv]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Output].ExternalColumns[salaNaziv]"
-                      length="32"
-                      lineageId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Output].Columns[salaNaziv]"
-                      name="salaNaziv"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Output].ExternalColumns[cijena]"
-                      dataType="r8"
-                      name="cijena" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeIskoristena]"
-                      dataType="bool"
-                      name="jeIskoristena" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeNocnaProjekcija]"
-                      dataType="bool"
-                      name="jeNocnaProjekcija" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeRezervisano]"
-                      dataType="bool"
-                      name="jeRezervisano" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Output].ExternalColumns[id]"
-                      dataType="i8"
-                      name="id" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Output].ExternalColumns[salaNaziv]"
-                      codePage="1252"
-                      dataType="str"
-                      length="32"
-                      name="salaNaziv" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Error Output]"
-                  isErrorOut="true"
-                  name="OLE DB Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Error Output].Columns[id]"
-                      dataType="i8"
-                      lineageId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Error Output].Columns[id]"
-                      name="id" />
-                    <outputColumn
-                      refId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Error Output].Columns[cijena]"
-                      dataType="r8"
-                      lineageId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Error Output].Columns[cijena]"
-                      name="cijena" />
-                    <outputColumn
-                      refId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Error Output].Columns[jeIskoristena]"
-                      dataType="bool"
-                      lineageId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Error Output].Columns[jeIskoristena]"
-                      name="jeIskoristena" />
-                    <outputColumn
-                      refId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Error Output].Columns[salaNaziv]"
-                      codePage="1252"
-                      dataType="str"
-                      length="32"
-                      lineageId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Error Output].Columns[salaNaziv]"
-                      name="salaNaziv" />
-                    <outputColumn
-                      refId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Error Output].Columns[jeNocnaProjekcija]"
-                      dataType="bool"
-                      lineageId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Error Output].Columns[jeNocnaProjekcija]"
-                      name="jeNocnaProjekcija" />
-                    <outputColumn
-                      refId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Error Output].Columns[jeRezervisano]"
-                      dataType="bool"
-                      lineageId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Error Output].Columns[jeRezervisano]"
-                      name="jeRezervisano" />
-                    <outputColumn
-                      refId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-          </components>
-          <paths>
-            <path
-              refId="Package\Import Rating Sarajevo.Paths[OLE DB Source Output]"
-              endId="Package\Import Rating Sarajevo\Dim Sala.Inputs[OLE DB Destination Input]"
-              name="OLE DB Source Output"
-              startId="Package\Import Rating Sarajevo\Sala.Outputs[OLE DB Source Output]" />
-          </paths>
-        </pipeline>
+          version="1" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -4665,396 +2720,7 @@ WHERE k.salaId = s.id;</property>
       <DTS:Variables />
       <DTS:ObjectData>
         <pipeline
-          version="1">
-          <components>
-            <component
-              refId="Package\Import Rating Tuzla\Dim Sala"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="Dim Sala"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Dim_Karta]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Import Rating Tuzla\Dim Sala.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-QQC9I9V.CinemaDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-QQC9I9V.CinemaDW]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Import Rating Tuzla\Dim Sala.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Import Rating Tuzla\Dim Sala.Inputs[OLE DB Destination Input].Columns[jeIskoristena]"
-                      cachedDataType="bool"
-                      cachedName="jeIskoristena"
-                      externalMetadataColumnId="Package\Import Rating Tuzla\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeIskoristena]"
-                      lineageId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Output].Columns[jeIskoristena]" />
-                    <inputColumn
-                      refId="Package\Import Rating Tuzla\Dim Sala.Inputs[OLE DB Destination Input].Columns[jeNocnaProjekcija]"
-                      cachedDataType="bool"
-                      cachedName="jeNocnaProjekcija"
-                      externalMetadataColumnId="Package\Import Rating Tuzla\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeNocnaProjekacija]"
-                      lineageId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Output].Columns[jeNocnaProjekcija]" />
-                    <inputColumn
-                      refId="Package\Import Rating Tuzla\Dim Sala.Inputs[OLE DB Destination Input].Columns[jeRezervisano]"
-                      cachedDataType="bool"
-                      cachedName="jeRezervisano"
-                      externalMetadataColumnId="Package\Import Rating Tuzla\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeRezervisana]"
-                      lineageId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Output].Columns[jeRezervisano]" />
-                    <inputColumn
-                      refId="Package\Import Rating Tuzla\Dim Sala.Inputs[OLE DB Destination Input].Columns[id]"
-                      cachedDataType="i8"
-                      cachedName="id"
-                      externalMetadataColumnId="Package\Import Rating Tuzla\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[kartaAltKey]"
-                      lineageId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Output].Columns[id]" />
-                    <inputColumn
-                      refId="Package\Import Rating Tuzla\Dim Sala.Inputs[OLE DB Destination Input].Columns[salaNaziv]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="32"
-                      cachedName="salaNaziv"
-                      externalMetadataColumnId="Package\Import Rating Tuzla\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[salaNaziv]"
-                      lineageId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Output].Columns[salaNaziv]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Tuzla\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[id]"
-                      dataType="i4"
-                      name="id" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Tuzla\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeIskoristena]"
-                      dataType="bool"
-                      name="jeIskoristena" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Tuzla\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeNocnaProjekacija]"
-                      dataType="bool"
-                      name="jeNocnaProjekacija" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Tuzla\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[jeRezervisana]"
-                      dataType="bool"
-                      name="jeRezervisana" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Tuzla\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[kartaAltKey]"
-                      dataType="i4"
-                      name="kartaAltKey" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Tuzla\Dim Sala.Inputs[OLE DB Destination Input].ExternalColumns[salaNaziv]"
-                      codePage="1252"
-                      dataType="str"
-                      length="32"
-                      name="salaNaziv" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Import Rating Tuzla\Dim Sala.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Import Rating Tuzla\Dim Sala.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Import Rating Tuzla\Dim Sala.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Import Rating Tuzla\Dim Sala.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Import Rating Tuzla\Dim Sala.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Import Rating Tuzla\Dim Sala.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Import Rating Tuzla\Sala"
-              componentClassID="Microsoft.OLEDBSource"
-              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-              description="OLE DB Source"
-              name="Sala"
-              usesDispositions="true"
-              version="7">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset"></property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
-                  k.id, 
-	k.cijena 'cijena',
-	k.jeIskoristena 'jeIskoristena',
-	s.naziv 'salaNaziv',
-	CAST(CASE 
-			WHEN DATEPART(HOUR, k.vrijemePrikazivanja) &gt; 18 
-				THEN 1 
-			ELSE 0 
-		END AS bit) AS 'jeNocnaProjekcija',
-	CAST(CASE 
-			WHEN k.rezervacijaId IS NOT NULL 
-				THEN 1
-			ELSE 0 
-		END AS bit) AS 'jeRezervisano'
-FROM dbo.karta k,dbo.sala s
-WHERE k.salaId = s.id;</property>
-                <property
-                  dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">2</property>
-                <property
-                  dataType="System.String"
-                  description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Import Rating Tuzla\Sala.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-QQC9I9V.CinemaDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-QQC9I9V.CinemaDB]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Output]"
-                  name="OLE DB Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Output].Columns[cijena]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Output].ExternalColumns[cijena]"
-                      lineageId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Output].Columns[cijena]"
-                      name="cijena"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Output].Columns[jeIskoristena]"
-                      dataType="bool"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeIskoristena]"
-                      lineageId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Output].Columns[jeIskoristena]"
-                      name="jeIskoristena"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Output].Columns[jeNocnaProjekcija]"
-                      dataType="bool"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeNocnaProjekcija]"
-                      lineageId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Output].Columns[jeNocnaProjekcija]"
-                      name="jeNocnaProjekcija"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Output].Columns[jeRezervisano]"
-                      dataType="bool"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeRezervisano]"
-                      lineageId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Output].Columns[jeRezervisano]"
-                      name="jeRezervisano"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Output].Columns[id]"
-                      dataType="i8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Output].ExternalColumns[id]"
-                      lineageId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Output].Columns[id]"
-                      name="id"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Output].Columns[salaNaziv]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Output].ExternalColumns[salaNaziv]"
-                      length="32"
-                      lineageId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Output].Columns[salaNaziv]"
-                      name="salaNaziv"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Output].ExternalColumns[cijena]"
-                      dataType="r8"
-                      name="cijena" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeIskoristena]"
-                      dataType="bool"
-                      name="jeIskoristena" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeNocnaProjekcija]"
-                      dataType="bool"
-                      name="jeNocnaProjekcija" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Output].ExternalColumns[jeRezervisano]"
-                      dataType="bool"
-                      name="jeRezervisano" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Output].ExternalColumns[id]"
-                      dataType="i8"
-                      name="id" />
-                    <externalMetadataColumn
-                      refId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Output].ExternalColumns[salaNaziv]"
-                      codePage="1252"
-                      dataType="str"
-                      length="32"
-                      name="salaNaziv" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Error Output]"
-                  isErrorOut="true"
-                  name="OLE DB Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Error Output].Columns[id]"
-                      dataType="i8"
-                      lineageId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Error Output].Columns[id]"
-                      name="id" />
-                    <outputColumn
-                      refId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Error Output].Columns[cijena]"
-                      dataType="r8"
-                      lineageId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Error Output].Columns[cijena]"
-                      name="cijena" />
-                    <outputColumn
-                      refId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Error Output].Columns[jeIskoristena]"
-                      dataType="bool"
-                      lineageId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Error Output].Columns[jeIskoristena]"
-                      name="jeIskoristena" />
-                    <outputColumn
-                      refId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Error Output].Columns[salaNaziv]"
-                      codePage="1252"
-                      dataType="str"
-                      length="32"
-                      lineageId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Error Output].Columns[salaNaziv]"
-                      name="salaNaziv" />
-                    <outputColumn
-                      refId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Error Output].Columns[jeNocnaProjekcija]"
-                      dataType="bool"
-                      lineageId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Error Output].Columns[jeNocnaProjekcija]"
-                      name="jeNocnaProjekcija" />
-                    <outputColumn
-                      refId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Error Output].Columns[jeRezervisano]"
-                      dataType="bool"
-                      lineageId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Error Output].Columns[jeRezervisano]"
-                      name="jeRezervisano" />
-                    <outputColumn
-                      refId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-          </components>
-          <paths>
-            <path
-              refId="Package\Import Rating Tuzla.Paths[OLE DB Source Output]"
-              endId="Package\Import Rating Tuzla\Dim Sala.Inputs[OLE DB Destination Input]"
-              name="OLE DB Source Output"
-              startId="Package\Import Rating Tuzla\Sala.Outputs[OLE DB Source Output]" />
-          </paths>
-        </pipeline>
+          version="1" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -5952,26 +3618,26 @@ WHERE k.salaId = s.id;</property>
         <NodeLayout
           Size="191,42"
           Id="Package\Import Rating Sarajevo"
-          TopLeft="882,31" />
+          TopLeft="865,32" />
         <NodeLayout
           Size="181,42"
           Id="Package\Import Rating Mostar"
-          TopLeft="1121,32" />
+          TopLeft="1104,33" />
         <NodeLayout
           Size="175,42"
           Id="Package\Import Rating Tuzla"
-          TopLeft="1342.5,35" />
+          TopLeft="1325.5,36" />
         <NodeLayout
           Size="203,42"
           Id="Package\Import Rating Banja Luka"
-          TopLeft="1310,117" />
+          TopLeft="1293,118" />
         <NodeLayout
           Size="175,42"
           Id="Package\Import Rating Bihac"
-          TopLeft="1122,121" />
+          TopLeft="1105,122" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 10]"
-          TopLeft="1073,52.5">
+          TopLeft="1056,53.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -5993,7 +3659,7 @@ WHERE k.salaId = s.id;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 11]"
-          TopLeft="1302,54.5">
+          TopLeft="1285,55.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6015,7 +3681,7 @@ WHERE k.salaId = s.id;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 12]"
-          TopLeft="1430,77">
+          TopLeft="1413,78">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6049,7 +3715,7 @@ WHERE k.salaId = s.id;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 13]"
-          TopLeft="1379,117">
+          TopLeft="1362,118">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6083,30 +3749,30 @@ WHERE k.salaId = s.id;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 14]"
-          TopLeft="1209.5,163">
+          TopLeft="1192.5,164">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-215.214285714286,50"
+              EndConnector="-186.833333333333,49"
               Start="0,0"
-              End="-215.214285714286,42.5">
+              End="-186.833333333333,41.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.9023761809333" />
+                    End="0,25.1643286573146" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,24.9023761809333"
-                    Point2="0,28.9023761809333"
-                    Point3="-4,28.9023761809333" />
+                    Point1="0,25.1643286573146"
+                    Point2="0,29.1643286573146"
+                    Point3="-4,29.1643286573146" />
                   <mssgle:LineSegment
-                    End="-211.214285714286,28.9023761809333" />
+                    End="-182.833333333333,29.1643286573146" />
                   <mssgle:CubicBezierSegment
-                    Point1="-211.214285714286,28.9023761809333"
-                    Point2="-215.214285714286,28.9023761809333"
-                    Point3="-215.214285714286,32.9023761809333" />
+                    Point1="-182.833333333333,29.1643286573146"
+                    Point2="-186.833333333333,29.1643286573146"
+                    Point3="-186.833333333333,33.1643286573146" />
                   <mssgle:LineSegment
-                    End="-215.214285714286,42.5" />
+                    End="-186.833333333333,41.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6261,7 +3927,7 @@ WHERE k.salaId = s.id;</property>
     design-time-name="Package\Import Dim_KinoLokacija">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="134,42"
           Id="Package\Import Dim_KinoLokacija\Kino i Grad"
@@ -6289,7 +3955,9 @@ WHERE k.salaId = s.id;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6446,14 +4114,14 @@ WHERE k.salaId = s.id;</property>
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="124,42"
-          Id="Package\Build Temp Kino_Rating\Dim Sala"
+          Id="2"
           TopLeft="6.5,92.5" />
         <NodeLayout
           Size="101,42"
-          Id="Package\Build Temp Kino_Rating\Sala"
+          Id="30"
           TopLeft="5.5,5.5" />
         <EdgeLayout
-          Id="Package\Build Temp Kino_Rating.Paths[OLE DB Source Output]"
+          Id="63"
           TopLeft="56,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6635,17 +4303,17 @@ WHERE k.salaId = s.id;</property>
     design-time-name="Package\Import Rating Sarajevo">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="124,42"
-          Id="Package\Import Rating Sarajevo\Dim Sala"
+          Id="2"
           TopLeft="6.5,92.5" />
         <NodeLayout
           Size="101,42"
-          Id="Package\Import Rating Sarajevo\Sala"
+          Id="30"
           TopLeft="5.5,5.5" />
         <EdgeLayout
-          Id="Package\Import Rating Sarajevo.Paths[OLE DB Source Output]"
+          Id="63"
           TopLeft="56,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6675,7 +4343,9 @@ WHERE k.salaId = s.id;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6685,17 +4355,17 @@ WHERE k.salaId = s.id;</property>
     design-time-name="Package\Import Rating Mostar">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="124,42"
-          Id="Package\Import Rating Mostar\Dim Sala"
+          Id="2"
           TopLeft="6.5,92.5" />
         <NodeLayout
           Size="101,42"
-          Id="Package\Import Rating Mostar\Sala"
+          Id="30"
           TopLeft="5.5,5.5" />
         <EdgeLayout
-          Id="Package\Import Rating Mostar.Paths[OLE DB Source Output]"
+          Id="63"
           TopLeft="56,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6725,7 +4395,9 @@ WHERE k.salaId = s.id;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6738,14 +4410,14 @@ WHERE k.salaId = s.id;</property>
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="124,42"
-          Id="Package\Import Rating Tuzla\Dim Sala"
+          Id="2"
           TopLeft="6.5,92.5" />
         <NodeLayout
           Size="101,42"
-          Id="Package\Import Rating Tuzla\Sala"
+          Id="30"
           TopLeft="5.5,5.5" />
         <EdgeLayout
-          Id="Package\Import Rating Tuzla.Paths[OLE DB Source Output]"
+          Id="63"
           TopLeft="56,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6790,14 +4462,14 @@ WHERE k.salaId = s.id;</property>
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="124,42"
-          Id="Package\Import Rating Banja Luka\Dim Sala"
+          Id="2"
           TopLeft="6.5,92.5" />
         <NodeLayout
           Size="101,42"
-          Id="Package\Import Rating Banja Luka\Sala"
+          Id="30"
           TopLeft="5.5,5.5" />
         <EdgeLayout
-          Id="Package\Import Rating Banja Luka.Paths[OLE DB Source Output]"
+          Id="63"
           TopLeft="56,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6842,14 +4514,14 @@ WHERE k.salaId = s.id;</property>
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="124,42"
-          Id="Package\Import Rating Bihac\Dim Sala"
+          Id="2"
           TopLeft="6.5,92.5" />
         <NodeLayout
           Size="101,42"
-          Id="Package\Import Rating Bihac\Sala"
+          Id="30"
           TopLeft="5.5,5.5" />
         <EdgeLayout
-          Id="Package\Import Rating Bihac.Paths[OLE DB Source Output]"
+          Id="63"
           TopLeft="56,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
